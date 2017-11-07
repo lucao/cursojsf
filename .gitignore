@@ -2,3 +2,7 @@
 /.classpath
 /.project
 /jsf-api-2.1.jar
+/jsf-impl-2.1.17.jar
+/javaee-api-6.0.jar
+/servlet-api-2.5.jar
+/javax.faces-2.1.13.jar
