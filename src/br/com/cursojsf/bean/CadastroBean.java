@@ -2,6 +2,7 @@ package br.com.cursojsf.bean;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -17,10 +18,9 @@ public class CadastroBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String nome;
-	
 	private String email;
-	
 	private String bairro;
+	private Date dataNascimento;
 
 	public String getNome() {
 		return nome;
@@ -60,5 +60,13 @@ public class CadastroBean implements Serializable {
 		retorno.add(new SelectItem("Copacabana", "Copacabana"));
 		retorno.add(new SelectItem("Ipanema", "Ipanema"));
 		return retorno ;
+	}
+
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 }

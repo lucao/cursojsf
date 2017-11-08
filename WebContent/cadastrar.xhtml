@@ -15,20 +15,28 @@
 			<f:facet name="header">
 				<h:outputText value="Cadastro" />
 			</f:facet>
-			<h:outputLabel value="Nome" for="nome" />
-			<h:inputText id="nome" value="#{cadastroBean.nome}" required="true" >
+			<h:outputLabel value="#{msg['txt.label.nome']}" for="nome" />
+			<h:inputText id="nome" value="#{cadastroBean.nome}" required="true" 
+			validatorMessage="#{msg['txt.validator.error.nomePequeno']}"
+			requiredMessage="#{msg['txt.validator.error.nomeVazio']}">
 				<f:validateLength minimum="2" maximum="100" />
 			</h:inputText>
-			<h:outputLabel value="E-mail" for="email" />
+			<h:outputLabel value="#{msg['txt.label.email']}" for="email" />
 			<h:inputText id="email" value="#{cadastroBean.email}" />
 			
-			<h:outputLabel value="Bairro" for="bairro" />
+			<h:outputLabel value="#{msg['txt.label.dataNascimento']} (dd/MM/yyyy)" for="dataNascimento" />
+			<h:inputText id="dataNascimento" value="#{cadastroBean.dataNascimento}"
+			converterMessage="#{msg['txt.converter.error.dataNascimentoIncorreta']}">
+				<f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT-3" />
+			</h:inputText>
+			
+			<h:outputLabel value="#{msg['txt.label.bairro']}" for="bairro" />
 			<h:selectOneMenu id="bairro" value="#{cadastroBean.bairro}">
 				<f:selectItems value="#{cadastroBean.listaBairros}" />
 			</h:selectOneMenu>
 
 			<f:facet name="footer">
-				<h:commandButton value="Cadastrar"
+				<h:commandButton value="#{msg['txt.button.label.cadastrar']}"
 					action="#{cadastroBean.cadastrar}" />
 			</f:facet>
 		</h:panelGrid>

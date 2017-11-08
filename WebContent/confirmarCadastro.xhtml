@@ -7,16 +7,27 @@
 	<title>Título</title>
 </h:head>
 <h:body>
-	<h:panelGrid id="panel" columns="2">
-		<f:facet name="header">
-			<h:outputText value="Cadastrado" />
-		</f:facet>
-		<h:outputText value="Nome: " />
-		<h:outputText value="#{cadastroBean.nome}" />
-		<h:outputText value="Email: " />
-		<h:outputText value="#{cadastroBean.email}" />
-		<h:outputText value="Bairro: " />
-		<h:outputText value="#{cadastroBean.bairro}" />
-	</h:panelGrid>
+	<h:form>
+		<h:panelGrid id="panel" columns="2">
+			<f:facet name="header">
+				<h:outputText value="Cadastrado" />
+			</f:facet>
+			<h:outputText value="#{msg['txt.label.nome']}: " />
+			<h:outputText value="#{cadastroBean.nome}" />
+			<h:outputText value="#{msg['txt.label.email']}: " />
+			<h:outputText value="#{cadastroBean.email}" />
+			<h:outputText value="#{msg['txt.label.bairro']}: " />
+			<h:outputText value="#{cadastroBean.bairro}" />
+
+			<h:outputText
+				value="#{msg['txt.label.dataNascimento']} (dd/MM/yyyy): " />
+			<h:outputText value="#{cadastroBean.dataNascimento}">
+				<f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT-3" />
+			</h:outputText>
+
+			<h:commandButton value="#{msg['txt.button.label.silvio']}" immediate="true"
+				action="index" />
+		</h:panelGrid>
+	</h:form>
 </h:body>
 </html>
