@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:f="http://java.sun.com/jsf/core"
-xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
-	<title>oeeee</title>
+	<title>Título</title>
 </h:head>
 <h:body>
 	<h:form>
-		Aqui
-		<h:inputText value="#{olaBean.message}"></h:inputText>
-		<h:commandButton value="bem vindo" action="bemvindo"></h:commandButton>
+		<h2>
+			<h:outputText value="Bem Vindo"></h:outputText>
+		</h2>
+		<h:commandButton value="Ir para cadastro" immediate="true" action="cadastrar" />
 	</h:form>
 </h:body>
 </html>

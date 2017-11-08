@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Título</title>
+</h:head>
+<h:body>
+	<h:panelGrid id="panel" columns="2">
+		<f:facet name="header">
+			<h:outputText value="Cadastrado" />
+		</f:facet>
+		<h:outputText value="Nome: " />
+		<h:outputText value="#{cadastroBean.nome}" />
+		<h:outputText value="Email: " />
+		<h:outputText value="#{cadastroBean.email}" />
+		<h:outputText value="Bairro: " />
+		<h:outputText value="#{cadastroBean.bairro}" />
+	</h:panelGrid>
+</h:body>
+</html>
