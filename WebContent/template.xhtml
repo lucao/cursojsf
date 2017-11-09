@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="topo">
+		<h:graphicImage name="logo.png" library="imagens" />
+	</div>
+	<div id="conteudo">
+		<ui:include src="/menu.xhtml" />
+		<ui:insert name="conteudo">
+			<h:form>
+				<h2>
+					<h:outputText value="#{msg['txt.label.bemvindo']}"></h:outputText>
+				</h2>
+				<h:commandButton value="#{msg['txt.button.label.cadastrar']}"
+					immediate="true" action="cadastrar" />
+				<h:link outcome="teste" value="TESTAR" />
+			</h:form>
+		</ui:insert>
+	</div>
+	<div id="rodape">
+		<strong>Alo tudo bem como vai</strong>
+	</div>
+</body>
+</html>
